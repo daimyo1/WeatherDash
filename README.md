@@ -4,6 +4,9 @@
 
 This is a web-based weather dashboard designed for users to easily check the weather outlook for multiple cities. By searching for a city, users can view current and 5-day forecast conditions, including temperature, humidity, and wind speed.
 
+## Deployed Url 
+https://daimyo1.github.io/WeatherDash/
+
 ## User Story 
 
 - AS A traveler
