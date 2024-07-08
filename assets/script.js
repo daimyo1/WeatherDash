@@ -1,4 +1,4 @@
-const apiKey = 'YOUR_API_KEY';
+const apiKey = '4aa5152ea42de8a24c45d2fbb931ff81';
 const searchBtn = document.getElementById('search-btn');
 const cityInput = document.getElementById('city-input');
 const cityNameElem = document.getElementById('city-name');
@@ -63,8 +63,9 @@ function updateForecast(data) {
         const windSpeed = weather.wind.speed;
 
         const forecastItem = document.createElement('div');
+        forecastItem.classList.add('forecast-item');
         forecastItem.innerHTML = `
-            <h3>${date}</h3>
+            <h4>${date}</h4>
             <img src="${icon}" alt="${weather.weather[0].description}">
             <p>Temperature: ${temp} °C</p>
             <p>Humidity: ${humidity}%</p>

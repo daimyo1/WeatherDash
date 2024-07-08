@@ -12,19 +12,25 @@
             <h1 class="navbar-title">Weather Dashboard</h1>
         </div>
     </nav>
-    <div class="container">
-        <div class="search-container">
-            <input type="text" id="city-input" placeholder="Enter city name">
-            <button id="search-btn">Search</button>
+    <div class="main-container">
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="search-btn">Search</button>
+            </div>
+            <div class="history">
+                <ul id="history-list"></ul>
+            </div>
         </div>
-        <div class="weather-info">
-            <h2 id="city-name"></h2>
-            <div id="current-weather"></div>
-            <div id="forecast"></div>
-        </div>
-        <div class="history">
-            <h2>Search History</h2>
-            <ul id="history-list"></ul>
+        <div class="weather-section">
+            <div class="current-weather-box">
+                <h2 id="city-name"></h2>
+                <div id="current-weather"></div>
+            </div>
+            <div class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div id="forecast"></div>
+            </div>
         </div>
     </div>
     <script src="assets/script.js"></script>
