@@ -2,11 +2,31 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
+    margin: 0;
+    padding-top: 60px; /* To ensure content is not hidden under the navbar */
+}
+
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+.navbar-title {
     margin: 0;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .container {
@@ -16,10 +36,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 600px;
-}
-
-h1 {
-    text-align: center;
+    margin: 20px auto;
 }
 
 .search-container {
