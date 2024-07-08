@@ -1,13 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    background-color: #454545; 
+    color: #fff; 
     margin: 0;
-    padding-top: 60px; /* Ensure content is not hidden under the navbar */
+    padding-top: 60px; 
+    font-size: 16px; 
 }
 
 .navbar {
-    background-color: #007bff;
+    background-color: #FF6000;
     color: #fff;
     position: fixed;
     width: 100%;
@@ -15,6 +17,7 @@ body {
     left: 0;
     padding: 15px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .navbar-container {
@@ -25,29 +28,35 @@ body {
 
 .navbar-title {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px; 
     font-weight: bold;
 }
 
+
+
 .main-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
-    margin-top: 20px;
-    padding: 0 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 60px auto 0;
 }
 
 .search-section {
-    width: 30%;
+    width: 100%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-right: 20px;
+    align-items: center;
+    text-align: center; 
 }
 
 .search-container {
     display: flex;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 #city-input {
@@ -56,19 +65,20 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    flex-grow: 1;
 }
 
 #search-btn {
     padding: 10px 20px;
     border: none;
-    background-color: #007bff;
+    background-color: #FF6000; 
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
 }
 
 #search-btn:hover {
-    background-color: #0056b3;
+    background-color: #FFA559; 
 }
 
 .history {
@@ -79,13 +89,14 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 #history-list li {
     cursor: pointer;
     padding: 10px;
     margin-bottom: 5px;
-    background-color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     text-align: center;
     font-size: 14px;
@@ -95,46 +106,90 @@ body {
 }
 
 #history-list li:hover {
-    background-color: #d0d0d0;
+    background-color: rgba(255, 255, 255, 0.2); 
 }
 
 .weather-section {
-    width: 70%;
+    width: 100%;
+    max-width: 800px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
 }
 
 .current-weather-box, .forecast-item {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.2); 
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
 .current-weather-box h2 {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .current-weather-box p, .forecast-item p {
     margin: 5px 0;
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .forecast-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forecast-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 10px;
+    justify-content: center;
 }
 
 .forecast-item {
-    width: 48%;
-    margin-bottom: 10px;
+    flex: 1 1 calc(20% - 10px);
+    max-width: calc(20% - 10px);
     box-sizing: border-box;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
 }
 
 .forecast-item img {
     max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .forecast-item {
+        flex: 1 1 calc(33.333% - 10px);
+        max-width: calc(33.333% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .forecast-item {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .forecast-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
 }
